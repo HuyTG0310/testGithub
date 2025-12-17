@@ -3,7 +3,7 @@
 
 @* xây dựng layout dùng bootstrap *@
 
-<h1>Change car color 1000</h1>
+<h1>Change car color 0310</h1>
 <br>
 <div class="row">
     <div class="col-lg-6">
@@ -18,18 +18,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-lg-6">
-        <img src="@currentCar.getImageUrl()" class="img-fluid" alt="" style="width: 100%;">
-    </div>
-    <div class="col-lg-6 d-flex align-items-center justify-content-center">
-        @foreach (var c in carList)
-        {
-            <button @onclick="() => currentCar.ChangeColor(c.color)" class="btn m-2 text-white"
-                style="background-color: @c.buttonColor;">@c.color color</button>
-        }
-    </div>
-</div>
 
 @code {
     Car currentCar = new Car("black", "black");
